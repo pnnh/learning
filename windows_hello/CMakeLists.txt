@@ -13,3 +13,4 @@ project ("WindowsHello")
 
 # Include sub-projects.
 add_subdirectory ("CMakeProjectHello")
+add_subdirectory ("CMakeProjectDWM")
