@@ -105,6 +105,11 @@ int main(int argc, char **argv)
         
         macWindow->show();
         controller->show();
+
+        // 此处需要调用以下3个Window的show方法，否则不会显示
+        contetWindow -> show();
+        leftAccessoryWindow -> show();
+        rigthAccessoryWindow -> show();
     });
 
     return app.exec();
