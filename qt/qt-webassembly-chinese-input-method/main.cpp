@@ -9,7 +9,7 @@ int main(int argc, char *argv[]) {
     // 设置全局字体，用于解决Qt for WebAssembly中文显示异常问题
     // fileName 参数不用带qrc:前缀
     int fontId = QFontDatabase::addApplicationFont(
-            ":/mymod/assets/fonts/NotoSansSC/NotoSansSC-Regular.otf");
+            ":/qt/qml/mymod/assets/fonts/NotoSansSC/NotoSansSC-Regular.otf");
     QStringList fontFamilies = QFontDatabase::applicationFontFamilies(fontId);
     qDebug() << "fontfamilies:" << fontFamilies;
     if (!fontFamilies.empty()) {
@@ -19,7 +19,7 @@ int main(int argc, char *argv[]) {
         QGuiApplication::setFont(font);
     }
     QQmlApplicationEngine engine;
-    QString strUrl{"qrc:/mymod/main.qml"};
+    QString strUrl{"qrc:/qt/qml/mymod/main.qml"};
 
     const QUrl url(strUrl);
 

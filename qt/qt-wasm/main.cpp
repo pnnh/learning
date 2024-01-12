@@ -8,7 +8,7 @@ int main(int argc, char *argv[]) {
 
   // 设置全局字体，用于解决Qt for WebAssembly中文显示异常问题
   // fileName 参数不用带qrc:前缀
-  int fontId = QFontDatabase::addApplicationFont(":/qtwasm/qrc/ZhiMangXing-Regular.ttf");
+  int fontId = QFontDatabase::addApplicationFont(":/qt/qml/qtwasm/qrc/ZhiMangXing-Regular.ttf");
   QStringList fontFamilies = QFontDatabase::applicationFontFamilies(fontId);
   qDebug()<<"fontfamilies:"<<fontFamilies;
   if (fontFamilies.size() > 0)
@@ -20,7 +20,7 @@ int main(int argc, char *argv[]) {
   }
 
   QQmlApplicationEngine engine;
-  const QUrl url(QStringLiteral("qrc:/qtwasm/qrc/Main.qml"));
+  const QUrl url(QStringLiteral("qrc:/qt/qml/qtwasm/qrc/Main.qml"));
 
   engine.load(url);
 

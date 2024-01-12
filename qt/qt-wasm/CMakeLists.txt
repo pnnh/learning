@@ -14,6 +14,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Qt6 COMPONENTS Core Gui Quick REQUIRED)
 
+qt_policy(
+        SET QTP0001 NEW
+)
+
 set(PROJECT_SOURCES
         main.cpp)
 

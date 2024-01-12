@@ -18,12 +18,29 @@ npm i -g http-server   # 安装工具
 http-server --cors
 ```
 
-添加一个到assets/index.html的超链接方便测试
-
+参考assets/index.html修改cmake-build-debug目录下的myapp.html，在适当位置添加如下内容
 ```shell
-cd cmake-build-webassembly
-ln -s  ../assets/index.html index.html
+#example {
+    height: 1px;
+    width: 1px;
+    display: none;
+    position: fixed;
+    border: none;
+    outline: none;
+    caret-color: transparent;
+    background: transparent;
+    color: transparent;
+    overflow: hidden;
+    resize: none;
+}
+<textarea id="example" rows="8" cols="25"></textarea>
+<script type="text/javascript" src="/assets/scripts/jquery-3.6.1.min.js"></script>
+<script type="text/javascript" src="/assets/scripts/index.js"></script>
 ```
+
+之后可以在工程主目录执行http-server，打开浏览器并定位到myapp.html以查看效果
+
+注意不同qt和emscripten版本编译出的html和js文件内容可能不同
 
 通过window.moduleConfig可以引用到暴露出的C++方法
 
