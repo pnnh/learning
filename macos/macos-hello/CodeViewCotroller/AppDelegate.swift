@@ -3,18 +3,13 @@ import SwiftUI
 
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    private var window: NSWindow!
+    var windowController: MainWindowController!
 
-    func applicationDidFinishLaunching(_ aNotification: Notification) {
-        let viewController = ViewController()
-        window = NSWindow(
-            contentRect: NSRect(x: 0, y: 0, width: 480, height: 270),
-            styleMask: [.miniaturizable, .closable, .resizable, .titled],
-            backing: .buffered, defer: false)
-        window.isReleasedWhenClosed = false
-        window.center()
-        window.title = "No Storyboard Window"
-        window.contentViewController = viewController
-        window.makeKeyAndOrderFront(nil)
+    func applicationDidFinishLaunching(_ aNotification: Notification) {        
+        app.setActivationPolicy(.regular)
+        app.activate(ignoringOtherApps: true)
+
+        self.windowController = MainWindowController()
+        self.windowController.showWindow(self)
     }
 }

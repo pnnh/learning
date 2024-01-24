@@ -19,8 +19,8 @@ class ViewController: NSViewController {
         let programmaticallyVC = JFProgrammaticallyViewController()
 
         // TODO: 似乎通过Ninja或Xcode构建时，以下两行需要注释或取消注释，否则会提示方法不存在错误
-        self.presentAsModalWindow(programmaticallyVC)
-        //self.presentViewControllerAsModalWindow(programmaticallyVC)
+       // self.presentAsModalWindow(programmaticallyVC)
+        self.presentViewControllerAsModalWindow(programmaticallyVC)
     }
     
     override var representedObject: Any? {
