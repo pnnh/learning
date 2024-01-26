@@ -22,7 +22,11 @@ set(BIN "QtNativeWindowSwift")
 add_subdirectory(SwiftModule)
 
 set(SOURCES  
-    main.cpp)
+    main.cpp
+    CppModule/checkeredwindow.h
+    CppModule/checkeredwindow.cpp
+    CppModule/qwindowTest.h
+    CppModule/qwindowTest.cpp)
 
 qt6_add_executable(${BIN}
     MANUAL_FINALIZATION

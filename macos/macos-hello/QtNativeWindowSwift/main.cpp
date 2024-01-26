@@ -1,5 +1,6 @@
 #include <QtWidgets/QtWidgets>
 #include "SwiftModule/WindowDelegate-swift.h"
+#include "CppModule/qwindowTest.h"
 
 int main(int argc, char **argv)
 {
@@ -16,8 +17,9 @@ int main(int argc, char **argv)
     //     contetWindow -> show();
     // });
 
+    getQWindowTest();
+
     SwiftModule::sayHello();
 
-    //auto controller = new MainWindowController();
     return app.exec();
 }
