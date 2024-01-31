@@ -3,5 +3,6 @@ load("//makerule:makerule.bzl", "makerule")
 
 makerule(
     name = "hello",
-    srcs = [],
+    srcs = ["go.mod", "main.go"],
+    out = "hello",
 )
